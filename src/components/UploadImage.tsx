@@ -2,7 +2,12 @@ import Image from "next/image";
 
 import DefaultUploadImage from "../app/favicon.ico";
 
-export function UploadImage() {
+interface UploadImageProps {
+  setIsLoading: (value: boolean) => void;
+  setImageUrl: (value: string) => void;
+}
+
+export function UploadImage({ setImageUrl, setIsLoading }: UploadImageProps) {
   return (
     <div className="flex flex-col gap-5 items-center justify-start">
       <h1 className="text-gray-500 text-xl">Carregue sua imagem</h1>
