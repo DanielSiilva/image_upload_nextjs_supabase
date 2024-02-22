@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { MdCheckCircle } from "react-icons/md";
+import { toast } from "react-toastify";
 
 // import example from "../app/favicon.ico";
 
@@ -9,6 +10,10 @@ interface ImagePreviewProps {
 }
 
 export function ImagePreview({ imageUrl }: ImagePreviewProps) {
+  function copyLinkToClipboard() {
+    navigator.clipboard.writeText(imageUrl);
+    toast.info("Imagem copiada!");
+  }
   return (
     <div className="flex flex-col gap-5 items-center justify-start">
       <MdCheckCircle size={43} className="text-green" />
@@ -25,7 +30,10 @@ export function ImagePreview({ imageUrl }: ImagePreviewProps) {
         <div className="text-gray-500 px-3 text-xs overflow-hidden whitespace-nowrap text-ellipsis max-w-[80%]">
           {imageUrl}
         </div>
-        <button className="bg-primary hover:brightness-90 w-full m-[1px] py-3 text-xs text-white rounded-lg">
+        <button
+          onClick={copyLinkToClipboard}
+          className="bg-primary hover:brightness-90 w-full m-[1px] py-3 text-xs text-white rounded-lg"
+        >
           Copiar link
         </button>
       </div>
