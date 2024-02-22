@@ -1,4 +1,4 @@
-# Nome do Projeto
+# Image Upload Usingn Next Supabase
 
 Este projeto foi desenvolvido como um desafio proposto pela página DevChallenge. Encorajamos a contribuição de todos! Sinta-se livre para colaborar, propor melhorias ou utilizar o código como inspiração para seus próprios projetos.
 
