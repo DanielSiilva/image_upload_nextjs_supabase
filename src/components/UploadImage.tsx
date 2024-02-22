@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Favicon from "../app/favicon.ico";
+
+import DefaultUploadImage from "../app/favicon.ico";
 
 export function UploadImage() {
   return (
@@ -9,7 +10,7 @@ export function UploadImage() {
 
       <div className="bg-gray-50 border-light-blue border-2 border-dashed rounded-xl p-10 flex items-center flex-col w-full justify-center gap-10">
         <Image
-          src={Favicon}
+          src={DefaultUploadImage}
           alt="Default image"
           width={115}
           height={100}
@@ -20,7 +21,7 @@ export function UploadImage() {
         </h3>
       </div>
 
-      <p className="text-gray-200 text-sm"> OU</p>
+      <p className="text-gray-200 text-sm">Ou</p>
 
       <div className="bg-primary hover:brightness-90 text-xs text-white rounded-lg">
         <label className="py-3 px-5 cursor-pointer block" htmlFor="fileInput">
