@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Favicon from "./favicon.ico";
+import Favicon from "../app/favicon.ico";
 
 export function UploadImage() {
   return (
