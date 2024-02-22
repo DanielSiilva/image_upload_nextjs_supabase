@@ -1,7 +1,5 @@
 # Image Upload Usingn Next Supabase
 
-Este projeto foi desenvolvido como um desafio proposto pela página DevChallenge. Encorajamos a contribuição de todos! Sinta-se livre para colaborar, propor melhorias ou utilizar o código como inspiração para seus próprios projetos.
-
 ## Interface do Projeto (UI) 🎨
 
 O design do projeto foi elaborado no Figma, com foco em uma experiência de usuário intuitiva e responsiva. Confira o layout do projeto [aqui](https://www.figma.com/file/NxbZm3CAovYh89dFXe7EOw/Image-Uploader?type=design&node-id=0-1&mode=design&t=3JSWh9Qx4rDqasRD-0).
@@ -19,10 +17,6 @@ Este projeto foi construído com o uso de tecnologias modernas para desenvolvime
 ## Visualizando o Projeto
 
 Para acessar o projeto localmente, abra `http://localhost:3000` em seu navegador após seguir os passos de instalação abaixo.
-
-## Funcionalidades
-
-(Descreva aqui as principais funcionalidades do projeto, como upload de imagens, autenticação de usuários, etc.)
 
 ## Como Utilizar
 
