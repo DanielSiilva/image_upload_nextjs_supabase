@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabase = createClient(
+const supase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL || "",
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
 );
@@ -10,7 +10,7 @@ export async function POST(req: Request) {
     const formData = await req.formData();
     const file = formData.get("file") as File;
 
-    const { data, error } = await supabase.storage
+    const { data, error } = await supase.storage
       .from("imagens")
       .upload(file.name, file);
 
@@ -18,11 +18,16 @@ export async function POST(req: Request) {
       throw new Error(error.message);
     }
 
-    const { data: imageUrl } = supabase.storage
-      .from("images")
+    const { data: imageUrl } = supase.storage
+      .from("imagens")
       .getPublicUrl(data.path);
 
-    return Response.json({ imageUrl: imageUrl.publicUrl }, { status: 201 });
+    return Response.json(
+      { imageUrl: imageUrl.publicUrl },
+      {
+        status: 201,
+      }
+    );
   } catch (error) {
     if (error instanceof Error) {
       return Response.json({ error: error.message });
